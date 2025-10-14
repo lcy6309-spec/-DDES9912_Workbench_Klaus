@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TypewriterInput : MonoBehaviour
 {
-    [Header("ÏÔÊ¾ÎÄ×ÖµÄ TextMeshPro (UI)")]
+    [Header("Text to display")]
     public TMP_Text paperText; 
 
     private string currentText = "";
