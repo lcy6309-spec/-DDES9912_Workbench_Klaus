@@ -5,7 +5,10 @@ using UnityEngine.UI;
 public class TypewriterInput : MonoBehaviour
 {
     [Header("Text to display")]
-    public TMP_Text paperText; 
+    public TMP_Text paperText;
+
+    [Header("Characters per line")]
+    public int maxCharsPerLine = 7; 
 
     private string currentText = "";
 
@@ -18,6 +21,15 @@ public class TypewriterInput : MonoBehaviour
         }
 
         currentText += keyValue;
+
+        int lastLineStart = currentText.LastIndexOf('\n') + 1;
+        int charsInCurrentLine = currentText.Length - lastLineStart;
+
+        if (charsInCurrentLine >= maxCharsPerLine)
+        {
+            currentText += "\n";
+        }
+
         paperText.text = currentText;
     }
 }
