@@ -1397,53 +1397,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89f7238d42a1e4944903f82e2200a073, type: 3}
---- !u!1 &257480425
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 257480426}
-  - component: {fileID: 257480427}
-  m_Layer: 0
-  m_Name: wheel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &257480426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257480425}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32384244, y: 0.149635, z: -0.91892}
-  m_LocalScale: {x: 0.24999997, y: 0.25, z: 0.25000003}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 458494686}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &257480427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257480425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddebe94146d3e3240b7c2049aa6e2bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TypewriterWheel
-  wheel: {fileID: 645169750}
-  speed: 100
-  rotationAngle: 90
 --- !u!1001 &266872517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1956,7 +1909,6 @@ Transform:
   m_Children:
   - {fileID: 1083182632}
   - {fileID: 645169750}
-  - {fileID: 257480426}
   - {fileID: 1793286598}
   - {fileID: 1304928751}
   m_Father: {fileID: 288770750}
