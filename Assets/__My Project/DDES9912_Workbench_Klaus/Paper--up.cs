@@ -2,36 +2,29 @@ using UnityEngine;
 
 public class PaperMove : MonoBehaviour
 {
-    public Transform paper;     
-    public float moveStep = 0.1f; 
-    public float maxY = 2f;       
+    public Transform paper;
+    public float moveStep = 0.1f;
+    public float maxY = 2f;
 
-    void Update()
+    private int count = 0; 
+
+    public void OnKeyPressed()
     {
-        for (KeyCode key = KeyCode.A; key <= KeyCode.Z; key++)
+        count++;
+
+        if (count >= 10)
         {
-            if (Input.GetKeyDown(key))
-            {
-                MoveUp();
-            }
+            count = 0;
+            MoveUp();
         }
     }
 
-    public void MoveUp()
+    void MoveUp()
     {
         if (paper == null) return;
 
-        if (paper.position.y < maxY)
-        {
-            paper.position += new Vector3(0, moveStep, 0);
-
-            if (paper.position.y > maxY)
-            {
-                Vector3 p = paper.position;
-                p.y = maxY;
-                paper.position = p;
-            }
-        }
-
+        Vector3 pos = paper.position;
+        pos.y = Mathf.Min(pos.y + moveStep, maxY);
+        paper.position = pos;
     }
 }
